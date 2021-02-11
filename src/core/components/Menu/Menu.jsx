@@ -7,10 +7,8 @@ export function Menu(){
     return(
         <nav className="navMenu">
            
-           
             <NavLink to="/casas">CASAS</NavLink>
             <NavLink to="/personajes">PERSONAJES</NavLink>
-            <NavLink to="/cronologia">CRONOLOGIA</NavLink>
             <NavLink to="/cronologia">CRONOLOGIA</NavLink>
 
         </nav>
