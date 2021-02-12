@@ -7,17 +7,23 @@ import { PersonajesPage } from "../../../pages/PersonajesPage/PersonajesPage";
 export function Routes() {
   return (
     <Switch>
-      <Route path="/casas">
+      <Route exact path="/casas">
           <CasasPage></CasasPage>
       </Route>
-      <Route path="/personajes">
+      <Route exact path="/personajes:_id">
+
+      </Route>
+      <Route exact path="/personajes">
           <PersonajesPage></PersonajesPage>
       </Route>
-      <Route path="/cronologia">
+      <Route exact path="/cronologia">
           <CronologiaPage></CronologiaPage>
       </Route>
-      <Route path="/">
+      <Route exact path="/">
           <HomePage></HomePage>
+      </Route>
+      <Route path="*">
+          <p>Error</p>
       </Route>
     </Switch>
   );
