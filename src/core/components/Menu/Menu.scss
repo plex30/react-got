@@ -1,0 +1,24 @@
+
+.c-menu{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    bottom: 0;
+
+    
+
+    &--link{
+    color:white;
+    text-decoration: none;
+    position:relative;
+    &:hover{
+        color:rgb(167, 167, 167);
+    }
+
+    }
+}

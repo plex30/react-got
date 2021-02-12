@@ -1,23 +1,23 @@
 import { Route, Switch } from "react-router-dom";
-import { CasasPage } from "../../../pages/CasasPage/CasasPage";
-import { CronologiaPage } from "../../../pages/CronologiaPage/CronologiaPage";
+import { TimelinePage } from "../../../pages/TimelinePage/TimelinePage";
 import { HomePage } from "../../../pages/HomePage/HomePage";
-import { PersonajesPage } from "../../../pages/PersonajesPage/PersonajesPage";
+import { CharactersPage } from "../../../pages/CharactersPage/CharactersPage";
+import { HousesPage } from "../../../pages/HousesPage/HousesPage";
 
 export function Routes() {
   return (
     <Switch>
-      <Route exact path="/casas">
-          <CasasPage></CasasPage>
+      <Route path="/houses">
+          <HousesPage></HousesPage>
       </Route>
-      <Route exact path="/personajes:_id">
-
+      <Route path="/characters:_id">
+          <CharactersPage></CharactersPage>
       </Route>
-      <Route exact path="/personajes">
-          <PersonajesPage></PersonajesPage>
+      <Route path="/characters">
+          <CharactersPage></CharactersPage>
       </Route>
-      <Route exact path="/cronologia">
-          <CronologiaPage></CronologiaPage>
+      <Route path="/timeline">
+          <TimelinePage></TimelinePage>
       </Route>
       <Route exact path="/">
           <HomePage></HomePage>
