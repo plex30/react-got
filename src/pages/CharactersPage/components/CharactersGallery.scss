@@ -1,0 +1,30 @@
+.c-characters-gallery{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    height: 700px;
+    width: 1600px;
+    &__img{
+        width: 248px;
+        height: 320px;
+        margin: 0 10px;
+        object-fit: contain;
+    }
+
+    &__name{
+        position: relative;
+        top: -2rem;
+        left: 3rem;
+        visibility: hidden;
+        color: white;
+        
+    }
+    &:hover & { 
+        &__name{
+            visibility: visible;
+        }     
+        
+    }
+}
