@@ -1,0 +1,52 @@
+.timeLineSectionMain
+{
+    overflow-y: scroll;
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    width: 100%;
+    
+}
+.timeLineSection{
+   
+    margin: auto;
+}
+.startCircle{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+
+.startCircle--number{
+    margin: auto;
+}
+
+.c-timelineChar{
+    border:1px solid white;
+    width:20vw;
+    height: 18vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.c-timelineChar--div{
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+
+.c-timelineChar--div__img{
+   width: 100%;
+   margin: auto;
+   
+    
+}
