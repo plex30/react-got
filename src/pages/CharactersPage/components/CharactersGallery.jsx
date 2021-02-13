@@ -10,7 +10,7 @@ export function CharacterGallery(props){
         {props.charactersGallery.map((item, i)=>
         
         <div key={i} className="col-12 col-sm-6 col-md-4 col-lg-3">
-        <Link to={"/characters/" + item._id}>
+        <Link to={"/characters/" + item.name}>
         <figure >
             <img src={item.image} alt={item.name}></img>
             <figcaption>{item.name}</figcaption>
