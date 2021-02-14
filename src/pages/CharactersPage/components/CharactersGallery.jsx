@@ -15,7 +15,7 @@ export function CharacterGallery(props){
         
         {props.charactersGallery.map((item, i)=>
         
-        <div key={i} className="col-12 col-sm-6 col-md-4 col-lg-2">
+        <div key={i} className="c-characters-gallery__content col-12 col-sm-6 col-md-4 col-lg-2">
         <Link to={"/characters/" + item.name}>
         <figure>{
             item.name == 'Roslin Frey' ? <img className="c-characters-gallery__img" src={roslin} alt={item.name}></img>

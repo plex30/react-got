@@ -3,28 +3,44 @@
     overflow-x: hidden;
     position: absolute;
     margin-top: 2rem;
-    margin-left: 10rem;
+    margin-left: 8rem;
     height: 700px;
-    width: 1600px;
+    width: 105rem;
+
+    &__content{
+        margin-right: -1rem;
+        position: relative;
+    }
     
     &__img{
         width: 248px;
         height: 320px;
-        margin: 0 10px;
-        object-fit: contain;
+         
     }
 
     &__name{
-        position: relative;
-        top: -2rem;
-        left: 3rem;
-        visibility: hidden;
+        position: absolute;
+        z-index: 10;
+        top: 17.5rem;
+        left: 3.45rem;
+        display: none;
         color: white;
+        text-align: center;
+        width: 248px;
+        height: 56px;
+        padding: 21px 28px 21px 29px;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
         
     }
     &:hover & { 
         &__name{
-            visibility: visible;
+            display: block;
         }     
         
     }
