@@ -10,6 +10,12 @@
     &__content{
         margin-right: -1rem;
         position: relative;
+        &:hover{
+            
+            .c-characters-gallery__name{
+                opacity: 1;
+            }
+        }   
     }
     
     &__img{
@@ -23,7 +29,7 @@
         z-index: 10;
         top: 17.5rem;
         left: 3.45rem;
-        display: none;
+        display: block;
         color: white;
         text-align: center;
         width: 248px;
@@ -36,12 +42,10 @@
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
+        transition: 0.5s opacity ease-in-out;
+        opacity: 0;
         
-    }
-    &:hover & { 
-        &__name{
-            display: block;
-        }     
-        
-    }
+    
+    
+}
 }
