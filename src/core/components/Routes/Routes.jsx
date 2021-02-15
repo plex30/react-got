@@ -10,7 +10,7 @@ export function Routes() {
       <Route path="/houses">
           <HousesPage></HousesPage>
       </Route>
-      <Route path="/characters:_id">
+      <Route path="/characters:name">
           <CharactersPage></CharactersPage>
       </Route>
       <Route path="/characters">
