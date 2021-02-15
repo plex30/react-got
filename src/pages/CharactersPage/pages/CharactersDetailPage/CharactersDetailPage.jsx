@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API } from "../../../../shared/consts/api.const";
 import './CharactersDetailPage.scss';
+import logoDefault from '../../../../assets/img/logoDefault.jpeg';
 
 export function CharactersDetailPage() {
 
     const [character, setCharacter] = useState(null);
-    const [houseName, setHouseName] = useState(null);
+    //const [houseName, setHouseName] = useState(null);
     const [house, setHouse] = useState(null);
 
     const { name } = useParams();
@@ -14,25 +15,23 @@ export function CharactersDetailPage() {
     const getCharacterDetail = () => {
         API.get('/api/show/characters/' + name).then((res) => {
             setCharacter(res.data);
-            setHouseName(res.data.house);
+            
+            const houseName = res.data.house;
+            getHouse(houseName);
         });
     }
 
-    const getHouse = () => {
-        //if({character}){
-            console.log(character);
-            console.log(houseName);
+    const getHouse = (houseName) => {
             API.get('/api/show/houses/' + houseName).then((res) => {
-                console.log(res.data);
-                setHouse(res.data);
-                console.log(res.data);
-                //console.log({house}.logoURL);
+                if (res.data[0] != null || res.data[0] != undefined) {
+                    setHouse(res.data[0]);
+                }else{
+                    setHouse(res.data);
+                }
             });
-        //}
     }
 
     useEffect(getCharacterDetail, []);
-    useEffect(getHouse, []);
 
     return (
         character && house &&
@@ -45,9 +44,12 @@ export function CharactersDetailPage() {
             </div>
             <div className= "c-char__extra">
                 <div className="c-char__extra__alleg">
-                    <h3>HOUSE</h3>
-                    <img src={house.logoURL} alt={house.name} />
-                </div>
+                    <h3>HOUSE</h3>{
+                            house.logoURL
+                            ?<img src={house.logoURL} alt={house.name} />
+                            :<img src= {logoDefault} alt={character.house} />
+                        }       
+                    </div>
                 <div className="c-char__extra__alleg">
                     <h3>ALLEGIANCES</h3>
                     <div>
