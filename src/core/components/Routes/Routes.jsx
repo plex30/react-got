@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import { TimelinePage } from "../../../pages/TimelinePage/TimelinePage";
 import { HomePage } from "../../../pages/HomePage/HomePage";
 import { CharactersPage } from "../../../pages/CharactersPage/CharactersPage";
+import { CharactersDetailPage } from "../../../pages/CharactersPage/pages/CharactersDetailPage/CharactersDetailPage";
 import { HousesPage } from "../../../pages/HousesPage/HousesPage";
 
 export function Routes() {
@@ -10,8 +11,8 @@ export function Routes() {
       <Route path="/houses">
           <HousesPage></HousesPage>
       </Route>
-      <Route path="/characters:name">
-          <CharactersPage></CharactersPage>
+      <Route path="/characters/:name">
+          <CharactersDetailPage></CharactersDetailPage>
       </Route>
       <Route path="/characters">
           <CharactersPage></CharactersPage>

@@ -1,0 +1,13 @@
+.c-char{
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    %__basic{
+        //left: 50%;
+    }
+    &__extra{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
