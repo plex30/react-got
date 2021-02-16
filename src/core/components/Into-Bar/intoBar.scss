@@ -1,0 +1,24 @@
+.c-intoBar {
+    margin-top: 2rem;
+    margin-left: 11rem;
+    display: flex;
+
+    &__contentSearch{
+        border-bottom: 2px solid white;
+    }
+
+    &__search{
+       margin-top: 1.8rem;
+       margin-right: 35rem;
+       height: 2rem;
+       font-size: 24px;
+       width: 12rem;
+       background-color: black;
+       border: none;
+       outline: none;
+       color: white;
+    }
+    &__img {
+        margin-right: 2rem;
+    }
+}
