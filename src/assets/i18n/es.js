@@ -7,5 +7,6 @@ export const es = {
     'APPEARANCES': 'Apariciones',
     'FATHER': 'Padre',
     'SIBLINGS': 'Hermanos',
-    'TITLES': 'Titulos'
+    'TITLES': 'Titulos',
+    'Games of thrones': 'Juego de tronos'
 }

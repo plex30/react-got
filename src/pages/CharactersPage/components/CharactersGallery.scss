@@ -49,3 +49,14 @@
     
 }
 }
+
+.c-characters-gallery::-webkit-scrollbar{
+    width: 4px;
+    background-color: #443d3d;
+}
+
+.c-characters-gallery::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 91.3px;
+    background-color: white;
+}

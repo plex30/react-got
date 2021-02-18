@@ -19,11 +19,16 @@ export function IntoBar(){
     const location = useLocation();
     
     const showIconHouse = (location)=>{
+        const local = location.pathname;
+        const dinChar = local.substring(11);
+        const dinHouse = local.substring(7);
         let display = false;
         switch (location.pathname) {
+            
             case '/characters':
                 return display = true;
-            
+            case '/characters'+dinChar:
+                    return display = true;
             case '/houses':
                 return display = true;
                     
@@ -60,10 +65,11 @@ export function IntoBar(){
            <input type="text" className="c-intoBar__search" placeholder="Search..."></input>
            </label>
            </div>}
-           {showIconHouse(location) && <NavLink className="c-intoBar__link"to="/"><img className="c-intoBar__img" src={house}></img></NavLink>}
+           <div className="c-intoBar__button">
+           {showIconHouse(location) && <NavLink className="c-intoBar__link"to="/"><img className="c-intoBar__imghouse" src={house}></img></NavLink>}
             <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('es')}><img className="c-intoBar__img" src={logoSpain}></img></button>
             <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('en')}><img className="c-intoBar__img" src={logoEngland}></img></button>
-
+           </div>
         </nav>
         
     )

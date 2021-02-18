@@ -19,12 +19,23 @@
        color: white;
     }
     &__img {
-        margin-right: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__imghouse{
+        margin-right: 1rem;
+        margin-bottom: 0.65rem;
     }
 
     &__link{
         background-color: transparent;
         border: none;
         outline: none;
+    }
+
+    &__button{
+        margin-left: 35rem;
+        padding-left: 50rem;
+        position: absolute;
     }
 }
