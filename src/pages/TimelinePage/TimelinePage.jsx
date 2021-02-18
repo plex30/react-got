@@ -5,6 +5,24 @@ import {TimelineGallery} from "../TimelinePage/components/TimelineGallery";
 
 export function TimelinePage() {
 
+  const [sortChars, setSortChars] = useState(0)
+
+  function sortPeoplefunction(){
+    
+    setSortChars(sortChars + 1)
+    console.log(sortChars)
+
+    if(sortChars % 2 == 0){
+     const ascendente = timeline.sort(((a, b) => (a.age.age > b.age.age ? 1 : a.age.age < b.age.age ? -1 : 0)))
+     setTimeline(ascendente)
+     
+    } else {
+      const descendente = timeline.sort(((a, b) => (a.age.age < b.age.age ? 1 : a.age.age > b.age.age ? -1 : 0)))
+     setTimeline(descendente)
+     
+    }
+  }
+  
   const [timeline, setTimeline] = useState([]);
   
   const getTimeline = () => {
@@ -16,7 +34,7 @@ export function TimelinePage() {
       
       for (let i = 0; i < localList.length; i++) {
         
-       if (localList[i].age != null && localList[i].age.age != undefined) {
+       if (localList[i].age != null && localList[i].age.age != undefined && localList[i].name != 'Ellaria Sand') {
          notNull.push(localList[i])
          
        }
@@ -26,6 +44,8 @@ export function TimelinePage() {
       const sortedList = [...notNull].sort((a, b) => (a.age.age > b.age.age ? 1 : a.age.age < b.age.age ? -1 : 0))
         setTimeline(sortedList)
 
+      
+
     });
   };
 
@@ -34,7 +54,7 @@ export function TimelinePage() {
 
   return (
     <div>
-        <TimelineGallery timelinePage={timeline}></TimelineGallery>
+        <TimelineGallery timelinePage={timeline} sortPeople={sortPeoplefunction} asc={sortChars}></TimelineGallery>
         
     </div>
   );

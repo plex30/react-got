@@ -1,10 +1,13 @@
 .timeLineSectionMain
 {
     overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    height: 700px;
+    width: 105rem;
     display: flex;
-    height: 60vh;
-    align-items: center;
-    width: 100%;
     
 }
 .timeLineSection{
@@ -19,6 +22,7 @@
     text-align: center;
     display: flex;
     margin: auto;
+    cursor: pointer;
 }
 
 
@@ -49,4 +53,9 @@
    margin: auto;
    
     
+}
+
+.arrowTime{
+    margin: auto;
+    margin-left: 9.3rem;
 }
