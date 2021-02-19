@@ -22,6 +22,8 @@ export function IntoBar(){
     const dinChar = local.substring(11);
     const dinHouse = local.substring(7);
     const charPage = '/characters'+dinChar;
+
+
     const showIconHouse = (location)=>{
         
         let display = false;
@@ -33,7 +35,8 @@ export function IntoBar(){
                     return display = true;
             case '/houses':
                 return display = true;
-                    
+            case '/houses'+dinHouse:
+                return display = true;        
             case '/timeline':
                 return display = true;
                          
@@ -67,9 +70,12 @@ export function IntoBar(){
 
             case '/characters'+dinChar:
                 return display = true;  
-            
+             
             case '/houses':
                 return display = false;
+
+            case '/houses'+dinHouse:
+                return display = true;     
                     
             case '/timeline':
                 return display = false;
@@ -92,8 +98,8 @@ export function IntoBar(){
            <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={onChange}></input>
            </label>
            </div>}
-           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img>Volver</NavLink> :
-           showIconBack(location) && <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgback" src={iconBack}></img>Volver</NavLink>}
+           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img>Volver</NavLink> 
+           :showIconBack(location) && <NavLink className="c-intoBar__imgBack"to="/houses"><img className="c-intoBar__imgback" src={iconBack}></img>Volver</NavLink>}
            <div className="c-intoBar__button">
            {showIconHouse(location) && <NavLink className="c-intoBar__link"to="/"><img className="c-intoBar__imghouse" src={house}></img></NavLink>}
             <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('es')}><img className="c-intoBar__img" src={logoSpain}></img></button>

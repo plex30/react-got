@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { IntoBar } from "../../core/components/Into-Bar/IntoBar";
+import { Menu } from "../../core/components/Menu/Menu";
 import { API } from "../../shared/consts/api.const";
 import { HousesGallery } from "./HousesGallery/HousesGallery";
 
@@ -21,7 +23,9 @@ export function HousesPage() {
   useEffect(getCasas, []);
   return (
     <div>
+      <IntoBar></IntoBar>
       <HousesGallery casa={casas} />
+      <Menu></Menu>
     </div>
   );
 }

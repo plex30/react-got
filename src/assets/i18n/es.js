@@ -8,5 +8,11 @@ export const es = {
     'FATHER': 'Padre',
     'SIBLINGS': 'Hermanos',
     'TITLES': 'Titulos',
-    'Games of thrones': 'Juego de tronos'
+    'Games of thrones': 'Juego de tronos',
+    'WORDS': 'Lema',
+    'SEAT': 'Sede',
+    'REGION': 'Region',
+    'ALLEGIANCES' : 'Alianzas',
+    'RELIGIONS' : 'Religiones',
+    'FOUNDATION': 'Fundacion'
 }
