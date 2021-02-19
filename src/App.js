@@ -9,8 +9,6 @@ function App() {
   return (
     <Router>
       <div>
-      <IntoBar></IntoBar>
-        <Menu></Menu>
         <Routes></Routes>
       </div>
     </Router>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { API } from "../../shared/consts/api.const";
 import { CharacterGallery } from "./components/CharactersGallery";
 import './CharacterPage.scss'
+import { IntoBar } from "../../core/components/Into-Bar/IntoBar";
+import { Menu } from "../../core/components/Menu/Menu";
 
 
 export function CharactersPage() {
@@ -19,7 +21,9 @@ export function CharactersPage() {
 
   return (
     <div className="global">
+    <IntoBar></IntoBar>
       <CharacterGallery charactersGallery={characters}></CharacterGallery>
+    <Menu></Menu>
     </div>
   );
 }
