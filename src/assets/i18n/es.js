@@ -14,5 +14,6 @@ export const es = {
     'REGION': 'Region',
     'ALLEGIANCES' : 'Alianzas',
     'RELIGIONS' : 'Religiones',
-    'FOUNDATION': 'Fundacion'
+    'FOUNDATION': 'Fundacion',
+    'Back': 'Volver'
 }

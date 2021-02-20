@@ -9,7 +9,7 @@ import iconSearch from '../../../assets/img/search1.png';
 import { useTranslation } from 'react-i18next';
 
 
-export function IntoBar(){
+export function IntoBar(props){
 
     const {t,i18n} = useTranslation(['translation']);
 
@@ -85,9 +85,10 @@ export function IntoBar(){
         }
     }
 
-    const onChange = (e, { value })=>{
+    const onChangeTxt = (e, { value })=>{
         const searchTxt = value.trim().replace(/" "/g, "");
-
+        console.log(searchTxt);
+        console.log(e)
         }
     return(
         <div>
@@ -95,11 +96,11 @@ export function IntoBar(){
            {showSearchBar(location) &&  
            <div className="c-intoBar__contentSearch">
            <label><img src={iconSearch}></img>
-           <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={onChange}></input>
+           <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={props.handleChange}></input>
            </label>
            </div>}
-           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img>Volver</NavLink> 
-           :showIconBack(location) && <NavLink className="c-intoBar__imgBack"to="/houses"><img className="c-intoBar__imgback" src={iconBack}></img>Volver</NavLink>}
+           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img>{t('Back')}</NavLink> 
+           :showIconBack(location) && <NavLink className="c-intoBar__imgBack"to="/houses"><img className="c-intoBar__imgback" src={iconBack}></img>{t('Back')}</NavLink>}
            <div className="c-intoBar__button">
            {showIconHouse(location) && <NavLink className="c-intoBar__link"to="/"><img className="c-intoBar__imghouse" src={house}></img></NavLink>}
             <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('es')}><img className="c-intoBar__img" src={logoSpain}></img></button>

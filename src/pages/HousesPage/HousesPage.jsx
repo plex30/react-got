@@ -6,24 +6,51 @@ import { HousesGallery } from "./HousesGallery/HousesGallery";
 
 export function HousesPage() {
   const [casas, setCasas] = useState([]);
+  const [search , setSearch] = useState([]);
+  const localHouseWithImage = [];
 
   const getCasas = () => {
     API.get("/api/show/houses").then((res) => {
-      const localHouseWithImage = [];
-
+      
       for (const house of res.data) {
         if (house.logoURL != undefined) {
           localHouseWithImage.push(house);
         }
       }
-      setCasas(localHouseWithImage);
-    });
+    
+        setCasas(localHouseWithImage);
+      
+       
+     
+    })
   };
 
-  useEffect(getCasas, []);
+  const filterItem = ()=>{
+    if (search) {
+      const filterHouse = casas.filter((house)=>{
+        
+        if (house.name.toLowerCase().includes(search.toLowerCase())) {
+            return casas;
+        }
+      })
+      setCasas(filterHouse);
+    }
+      
+               
+  }
+
+  useEffect(getCasas,[]);
+  useEffect(()=>{
+    if (search) {
+      filterItem();
+    }else{
+      getCasas();
+    }
+  }, [search]);
+
   return (
     <div>
-      <IntoBar></IntoBar>
+      <IntoBar handleChange={(e)=> setSearch(e.target.value)}></IntoBar>
       <HousesGallery casa={casas} />
       <Menu></Menu>
     </div>
