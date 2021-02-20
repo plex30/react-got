@@ -22,6 +22,7 @@
     }
     &__img {
         margin-right: 1rem;
+        cursor: pointer;
     }
 
     &__imghouse{
@@ -33,6 +34,7 @@
         background-color: transparent;
         border: none;
         outline: none;
+        cursor: pointer;
     }
 
     &__button{
@@ -182,4 +184,41 @@
 
 .inp::checked{
     transform: none;
+}
+
+
+@media (max-width: 600px) {
+  .c-intoBar {
+    top:10;
+    font-size: 3vw;
+    margin-top: 1rem;
+    width: 80%;
+    margin-left: 0;
+    margin: auto;
+
+  &__contentSearch{
+    width: 100%;
+    margin-top: 2rem
+  };
+
+  &__search{
+    font-size: 1rem;
+  }
+  &__imghouse{
+    display: none;
+  }
+  &__img {
+  display: none;
+  cursor: pointer;
+}
+&__link {
+  display: none;
+  cursor: pointer;
+}
+  }
+
+.iconSearch{
+  display: none;
+}
+
 }

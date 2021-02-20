@@ -95,7 +95,7 @@ export function IntoBar(props){
         <nav className="c-intoBar">
            {showSearchBar(location) &&  
            <div className="c-intoBar__contentSearch">
-           <label><img src={iconSearch}></img>
+           <label><img src={iconSearch} className="iconSearch"></img>
            <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={props.handleChange}></input>
            </label>
            </div>}

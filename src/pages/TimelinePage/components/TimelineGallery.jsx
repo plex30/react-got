@@ -11,11 +11,11 @@ export function TimelineGallery(props) {
     <div className="timeLineSection">
     <div className="startCircle" onClick={props.sortPeople}>
     <span className="startCircle--number">
-    {props.asc % 2 != 0 ? <p>0</p> : <p>100</p>}
+    {props.asc % 2 == 0 ? <p className="number">0</p> : <p className="number">100</p>}
     </span>
    
     </div>
-    {props.asc % 2 != 0 ? <img className="arrowTime"src={down2}></img> : <img className="arrowTime" src={up2}></img>}
+    {props.asc % 2 != 0 ? <img className="arrowTime"src={up2}></img> : <img className="arrowTime" src={down2}></img>}
    
      <div className="mainDivTime">
      <div className="emptyDiv"></div>
