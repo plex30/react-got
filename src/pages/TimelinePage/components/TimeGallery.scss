@@ -1,3 +1,9 @@
+.mainDivTime{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    align-items: flex-start;
+}
 .timeLineSectionMain
 {
     overflow-y: scroll;
@@ -24,19 +30,47 @@
     margin: auto;
     cursor: pointer;
 }
+.emptyDiv{
+    width: 250px;
+    height: 50px;
+    border-right: 1px solid white;
+    position: relative;
+    border-collapse: collapse;
+}
+.emptyDiv2{
+    width: 250px;
+    height: 50px;
+    border-left: 1px solid white;
+    border-collapse: collapse;
+}
 
+.block1{
+    margin-top: 80px;
+    position: relative;
+    border-left: 1px solid white;
+    
+}
+
+.block2{
+    border-right: 2px solid white;
+}
+
+.divPrimigen{
+    height: 280px;
+}
 
 .startCircle--number{
     margin: auto;
 }
 
 .c-timelineChar{
-    border:1px solid white;
-    width:20vw;
-    height: 18vw;
+    border-top:1px solid white;
+    width:250px;
+    height:280px;
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .c-timelineChar--div{
@@ -57,5 +91,6 @@
 
 .arrowTime{
     margin: auto;
-    margin-left: 9.3rem;
+    margin-left: 14.7rem;
+    height: 2.5rem;
 }
