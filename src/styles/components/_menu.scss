@@ -9,7 +9,6 @@
     width: 100%;
     max-width: 100%;
     bottom: 0;
-
     
 
     &--link{
@@ -21,4 +20,13 @@
     }
 
     }
+
+    
 }
+
+.c-menu--link.active{
+    border-bottom: 2px solid white;
+}
+
+
+

@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { API } from "../../../shared/consts/api.const";
 import './HousesDetails.scss';
 import { useParams } from 'react-router-dom';
+import { IntoBar } from "../../../core/components/Into-Bar/IntoBar";
+import { useTranslation } from "react-i18next/";
 export function HousesDetails() {
+
+    const {t} = useTranslation(['translation']);
 
     const [casa, setCasa] = useState(null);
 
@@ -22,6 +26,9 @@ export function HousesDetails() {
     
     return (
         casa &&
+        <div>
+        <IntoBar></IntoBar>
+       
         <div className="c-house">
             <div className="c-house__basic">
                 <figure>
@@ -32,42 +39,42 @@ export function HousesDetails() {
             <div className="c-house__extra">
 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">WORDS</h3>       
+                    <h3 className="c-house__title">{t('WORDS')}</h3>       
                     <div className="c-house__extra__box__subtitle__text">
                         <p>{casa.words}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">SEAT</h3>
+                    <h3 className="c-house__title">{t('SEAT')}</h3>
                     <div className="c-house__extra__box__subtitle__text">
                         <p>{casa.seat}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">REGION</h3>
+                    <h3 className="c-house__title">{t('REGION')}</h3>
                     <div className="c-house__extra__box__subtitle__text">
                         <p>{casa.region}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">ALLEGIANCES</h3>
+                    <h3 className="c-house__title">{t('ALLEGIANCES')}</h3>
                     <div className="c-house__extra__box__subtitle__text">
                         <p>{casa.allegiance}</p>
                     </div>
                 </div>
                 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">RELIGIONS</h3>            
+                    <h3 className="c-house__title">{t('RELIGIONS')}</h3>            
                     <div className="c-house__extra__box__subtitle__text">
                         <p>{casa.religion}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
-                    <h3 className="c-house__title">FOUNDATION</h3>            
+                    <h3 className="c-house__title">{t('FOUNDATION')}</h3>            
                     <div className="c-house__text">
                         <p>{casa.createdAt}</p>
                     </div>
@@ -75,6 +82,6 @@ export function HousesDetails() {
 
             </div>
         </div>
-        
+        </div>
     )
 }

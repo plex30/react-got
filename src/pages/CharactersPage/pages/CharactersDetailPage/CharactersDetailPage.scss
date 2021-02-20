@@ -1,13 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .c-char{
     display: flex;
     flex-direction: column;
     //align-items: center;
-    %__basic{
-        //left: 50%;
+    &__basic{
+        margin-left: 48rem;
+        margin-top: 7rem;
     }
+
+    &__img{
+        width: 248px;
+        height: 320px;
+        object-fit: contain;
+    }
+
+    &__name{
+        font-size: 36px;
+        margin-left: -0.4rem;
+    }
+
+    &__title{
+        font-size: 24px;
+        
+    }
+
+    &__house{
+        width: 120px;
+        height: 141.6px;
+        margin-left: -2rem;
+    }
+
+    &__apires{
+        text-align: center;
+        font-family: 'Lato';
+        font-size: 16px;
+    }
+
+    &__apires{
+        text-align: center;
+        font-family: 'Lato';
+        font-size: 16px;
+        overflow-y: auto;
+        height: 180px;
+        margin: -1.5rem;
+
+        &::-webkit-scrollbar{
+            width: 4px;
+            background-color: #443d3d;
+        }
+        &::-webkit-scrollbar-thumb{
+            width: 4px;
+            background-color: white;
+        }
+    }
+
     &__extra{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
+
+    
+
+    
 }
+

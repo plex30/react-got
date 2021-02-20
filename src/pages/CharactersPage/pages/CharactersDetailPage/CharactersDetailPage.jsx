@@ -3,11 +3,15 @@ import { useParams } from 'react-router-dom';
 import { API } from "../../../../shared/consts/api.const";
 import './CharactersDetailPage.scss';
 import logoDefault from '../../../../assets/img/logoDefault.jpeg';
+import { useTranslation } from 'react-i18next/';
+import { IntoBar } from '../../../../core/components/Into-Bar/IntoBar';
 
 export function CharactersDetailPage() {
 
+    const {t} = useTranslation(['translation']);
+
     const [character, setCharacter] = useState(null);
-    //const [houseName, setHouseName] = useState(null);
+
     const [house, setHouse] = useState(null);
 
     const { name } = useParams();
@@ -15,7 +19,6 @@ export function CharactersDetailPage() {
     const getCharacterDetail = () => {
         API.get('/api/show/characters/' + name).then((res) => {
             setCharacter(res.data);
-            
             const houseName = res.data.house;
             getHouse(houseName);
         });
@@ -35,24 +38,28 @@ export function CharactersDetailPage() {
 
     return (
         character && house &&
+        <div>
+        <IntoBar></IntoBar>
+        
         <div className = "c-char">
             <div className= "c-char__basic">
                 <figure>
-                    <img src={character.image} alt={character.name} />
-                    <h2>{character.name}</h2>
+                    <img src={character.image} alt={character.name} className="c-char__img"/>
+                    <h2 className="c-char__name">{character.name}</h2>
                 </figure>
             </div>
+
             <div className= "c-char__extra">
                 <div className="c-char__extra__alleg">
-                    <h3>HOUSE</h3>{
+                    <h3 className="c-char__title">{t('HOUSE')}</h3>{
                             house.logoURL
-                            ?<img src={house.logoURL} alt={house.name} />
-                            :<img src= {logoDefault} alt={character.house} />
+                            ?<img className="c-char__house" src={house.logoURL} alt={house.name} />
+                            :<img className="c-char__house" src= {logoDefault} alt={character.house} />
                         }       
-                    </div>
+                </div>
                 <div className="c-char__extra__alleg">
-                    <h3>ALLEGIANCES</h3>
-                    <div>
+                    <h3 className="c-char__sub">{t('ALLEGIANCES')}</h3>
+                    <div className="c-char__apires">
                     {character.allegiances.map((allegiance, i)=>
                         <div key={i}>
                             <p>{allegiance}</p>
@@ -60,9 +67,9 @@ export function CharactersDetailPage() {
                     )}
                     </div>
                 </div>
-                <div className="c-char__extra__appear">
-                    <h3>APPEARANCES</h3>
-                    <div>
+                <div className="c-char__extra-appear">
+                    <h3 className="c-char__sub">{t('APPEARANCES')}</h3>
+                    <div className="c-char__apires">
                     {character.appearances.map((appearance, i)=>
                         <div key={i}>
                             <p>{appearance}</p>
@@ -71,14 +78,14 @@ export function CharactersDetailPage() {
                     </div>
                 </div>
                 <div className="c-char__extra__father">
-                    <h3>FATHER</h3>
-                    <div>
+                    <h3 className="c-char__sub">{t('FATHER')}</h3>
+                    <div className="c-char__apires">
                         <p>{character.father}</p>
                     </div>
                 </div>
                 <div className="c-char__extra__sib">
-                    <h3>SIBLINGS</h3>
-                    <div>
+                    <h3 className="c-char__sub">{t('SIBLINGS')}</h3>
+                    <div className="c-char__apires">
                     {character.siblings.map((sibling, i)=>
                         <div key={i}>
                             <p>{sibling}</p>
@@ -87,8 +94,8 @@ export function CharactersDetailPage() {
                     </div>
                 </div>
                 <div className="c-char__extra__titles">
-                    <h3>TITLES</h3>
-                    <div>
+                    <h3 className="c-char__sub">{t('TITLES')}</h3>
+                    <div className="c-char__apires">
                     {character.titles.map((title, i)=>
                         <div key={i}>
                             <p>{title}</p>
@@ -98,5 +105,6 @@ export function CharactersDetailPage() {
                 </div>
             </div>
         </div> 
+        </div>
     );
 }

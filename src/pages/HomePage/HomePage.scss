@@ -1,0 +1,19 @@
+.c-home{
+    background: url('./../../assets/img/homepage.png');
+    width: 100vw;
+    height: 100vh;
+    padding-top: 1rem;
+    &__title{
+        
+            text-align: center;
+            font-size: 176px;
+            margin-top: 15rem;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+        
+    }
+}
+

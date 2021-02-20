@@ -24,5 +24,19 @@
         letter-spacing: normal;
         color: white;
         text-align: center;
+        margin-left: 3.5rem;
+        margin-top: 1rem;
+        position: absolute;
     }
+}
+
+.c-house-gallery::-webkit-scrollbar{
+    width: 4px;
+    background-color: #443d3d;
+}
+
+.c-house-gallery::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 91.3px;
+    background-color: white;
 }
