@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { IntoBar } from "../../core/components/Into-Bar/IntoBar";
+import { Menu } from "../../core/components/Menu/Menu";
 import { API } from "../../shared/consts/api.const";
 import {TimelineGallery} from "../TimelinePage/components/TimelineGallery";
 
@@ -54,8 +56,9 @@ export function TimelinePage() {
 
   return (
     <div>
+        <IntoBar></IntoBar>
         <TimelineGallery timelinePage={timeline} sortPeople={sortPeoplefunction} asc={sortChars}></TimelineGallery>
-        
+        <Menu></Menu>
     </div>
   );
 }

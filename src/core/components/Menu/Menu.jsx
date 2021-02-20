@@ -10,9 +10,9 @@ export function Menu(){
         <div>
         <nav className="c-menu">
            
-            <NavLink className="c-menu--link"to="/houses">{t('Houses')}</NavLink>
-            <NavLink className="c-menu--link"to="/characters">{t('Characters')}</NavLink>
-            <NavLink className="c-menu--link"to="/timeline">{t('Timeline')}</NavLink>
+            <NavLink className="c-menu--link" to="/houses" activeClassName="active">{t('Houses')}</NavLink>
+            <NavLink className="c-menu--link" to="/characters" activeClassName="active">{t('Characters')}</NavLink>
+            <NavLink className="c-menu--link" to="/timeline" activeClassName="active">{t('Timeline')}</NavLink>
 
         </nav>
 
