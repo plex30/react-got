@@ -42,22 +42,33 @@
 
 
 @media only screen and (max-device-width: 480px){
+
     .c-house{
         display: inline;
+        //max-height:max-content;
+        //width: 100%;
+        //width: 100vw;
+        padding-bottom: 80%;
+        //top: 800px;
         &__basic{
             width: 100vh;
+            //eight: fit-content;
             margin-left: 2rem;
             margin-top: 4.5rem;
+        }
+        &__figure{
+
         }
         &__img{
             width: 248px;
             height: 320px;
             object-fit: contain;
+            //margin-left: 0rem;
         }
     
         &__name{
             font-size: 26px;
-            margin-left: -0.4rem;
+            margin-left: -20rem;
             margin-bottom: 3rem;
         }
     
