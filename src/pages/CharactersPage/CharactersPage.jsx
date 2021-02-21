@@ -51,7 +51,7 @@ export function CharactersPage() {
 
 
   return (
-    <div className="global">
+    <div className="c-charactersPage">
     <IntoBar handleChange={(e)=> setSearch(e.target.value)}></IntoBar>
       <CharacterGallery charactersGallery={characters}></CharacterGallery>
     <Menu></Menu>
