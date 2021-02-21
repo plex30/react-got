@@ -40,3 +40,36 @@
     
 }
 
+
+@media only screen and (max-device-width: 480px){
+    .c-house{
+        display: inline;
+        &__basic{
+            width: 100vh;
+            margin-left: 2rem;
+            margin-top: 4.5rem;
+        }
+        &__img{
+            width: 248px;
+            height: 320px;
+            object-fit: contain;
+        }
+    
+        &__name{
+            font-size: 26px;
+            margin-left: -0.4rem;
+            margin-bottom: 3rem;
+        }
+    
+        &__title{
+            font-size: 18px;
+            
+        }
+    
+        &__extra{
+            display: inline;
+            text-align: center;
+        }
+    }
+}
+
