@@ -11,7 +11,7 @@
     position: absolute;
     margin-top: 8rem;
     margin-left: 8rem;
-    height: 700px;
+    height: 630px;
     width: 105rem;
     display: flex;
     
@@ -109,4 +109,41 @@
     width: 4px;
     height: 91.3px;
     background-color: white;
+}
+
+@media only screen and (max-device-width: 480px){
+    .mainDivTime{
+        max-width: 300px;
+    }
+    .timeLineSectionMain
+{
+    width: 100%;
+    margin-top: 8rem;
+    margin-left: 0rem;
+    
+}
+.emptyDiv,
+.emptyDiv2{
+    display: none;
+}
+.c-timelineChar{
+    width: 100%;
+    border: 0px solid white;
+}
+
+.block1,
+.block2{
+    margin-top: 0;
+    border-right: 0px solid white;
+}
+
+.figureClass{
+    border: 1px solid white;
+    width: 230px;
+}
+
+.arrowTime{
+    margin-left: 8.6rem;
+}
+
 }
