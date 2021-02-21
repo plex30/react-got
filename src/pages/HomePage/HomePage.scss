@@ -20,7 +20,7 @@
 }
 
 
-@media (min-width:320px)  {
+@media only screen and (max-device-width: 480px) {
     .c-home{
     background-size: cover;
     background-position: center, center;
