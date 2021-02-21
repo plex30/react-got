@@ -22,7 +22,7 @@ export function TimelineGallery(props) {
      <div className="emptyDiv2"></div>
       {props.timelinePage.map((character, i)=>
           <div key={i} className="divPrimigen">
-          { i % 2 != 0 ? <div className="c-timelineChar block1"><figure>  {
+          { i % 2 != 0 ? <div className="c-timelineChar block1"><figure className="figureClass">  {
             character.name == 'Ellaria Sand' ? <h4>39</h4> :
                 <h4>{character.age && character.age.age}</h4> }
                 <h4>{character.name}</h4>
@@ -30,7 +30,7 @@ export function TimelineGallery(props) {
                 <img className="c-timelineChar--div__img" src={character.image}></img>
                     </div> 
 
-            </figure></div> : <div className="c-timelineChar block2"><figure>  {
+            </figure></div> : <div className="c-timelineChar block2"><figure className="figureClass">  {
             character.name == 'Ellaria Sand' ? <h4>39</h4> :
                 <h4>{character.age && character.age.age}</h4> }
                 <h4>{character.name}</h4>
