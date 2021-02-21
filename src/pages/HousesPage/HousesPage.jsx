@@ -4,6 +4,7 @@ import { LoadingContext } from "../../core/components/Loading/context/LoadingCon
 import { Menu } from "../../core/components/Menu/Menu";
 import { API } from "../../shared/consts/api.const";
 import { HousesGallery } from "./HousesGallery/HousesGallery";
+import './HousesPage.scss';
 
 export function HousesPage() {
   const [casas, setCasas] = useState([]);
@@ -52,7 +53,7 @@ export function HousesPage() {
   }, [search]);
 
   return (
-    <div>
+    <div className="c-housesPage">
       <IntoBar handleChange={(e)=> setSearch(e.target.value)}></IntoBar>
       <HousesGallery casa={casas} />
       <Menu></Menu>

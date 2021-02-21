@@ -31,54 +31,70 @@ export function HousesDetails() {
        
         <div className="c-house">
             <div className="c-house__basic">
-                <figure>
+                <figure className="c-house__figure">
                     <img className="c-house__img" src={casa.logoURL} alt={casa.name}/>
                     <h2 className="c-house__name">{casa.name}</h2>
                 </figure>
             </div>
             <div className="c-house__extra">
 
-                <div className="c-house__extra__box">
+            {casa.words
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('WORDS')}</h3>       
                     <div className="c-house__text">
                         <p>{casa.words}</p>
                     </div>
                 </div>
+                :<div className="empty"></div>
+            }
 
-                <div className="c-house__extra__box">
+            {(casa.seat).length > 0
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('SEAT')}</h3>
                     <div className="c-house__text">
                         <p>{casa.seat}</p>
                     </div>
                 </div>
+                :<div className="empty"></div>
+            }
 
-                <div className="c-house__extra__box">
+            {casa.region
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('REGION')}</h3>
                     <div className="c-house__text">
                         <p>{casa.region}</p>
                     </div>
                 </div>
+                :<div className="empty"></div>
+            }
 
-                <div className="c-house__extra__box">
+            {(casa.allegiance).length > 0
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('ALLEGIANCES')}</h3>
                     <div className="c-house__text">
                         <p>{casa.allegiance}</p>
                     </div>
                 </div>
-                
-                <div className="c-house__extra__box">
+                :<div className="empty"></div>
+            }
+            {(casa.religion).length > 0
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('RELIGIONS')}</h3>            
                     <div className="c-house__text">
                         <p>{casa.religion}</p>
                     </div>
                 </div>
-
-                <div className="c-house__extra__box">
+                :<div className="empty"></div>
+            }
+            {casa.createdAt
+                ?<div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('FOUNDATION')}</h3>            
                     <div className="c-house__text">
                         <p>{casa.createdAt}</p>
                     </div>
                 </div>
+                :<div className="empty"></div>
+            }
 
             </div>
         </div>

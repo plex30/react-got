@@ -13,7 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   return (
     <Router>
-      <div>
+      <div className="prueba">
       <LoadingContext.Provider value={{isLoading, setIsLoading}}>
       <Loading></Loading>
         <Routes></Routes>
