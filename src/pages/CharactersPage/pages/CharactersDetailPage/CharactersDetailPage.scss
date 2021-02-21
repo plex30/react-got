@@ -73,9 +73,11 @@
 
 @media only screen and (max-device-width: 480px){
     .c-char{
-        display: inline;
+        display: block;
+        overflow-x: hidden;
+        height: 750px;
         &__basic{
-            width: 100vh;
+            
             margin-left: 2rem;
             margin-top: 4.5rem;
         }
@@ -87,7 +89,7 @@
     
         &__name{
             font-size: 26px;
-            margin-left: -0.4rem;
+            margin-left: -2rem;
             margin-bottom: 3rem;
         }
     
