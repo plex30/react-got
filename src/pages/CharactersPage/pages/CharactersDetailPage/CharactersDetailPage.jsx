@@ -45,7 +45,7 @@ export function CharactersDetailPage() {
             <div className= "c-char__basic">
                 <figure>
                     <img src={character.image} alt={character.name} className="c-char__img"/>
-                    <h2 className="c-char__name">{character.name}</h2>
+                    <figcaption className="c-char__name">{character.name}</figcaption>
                 </figure>
             </div>
 
@@ -90,7 +90,7 @@ export function CharactersDetailPage() {
                         <div key={i}>
                             <p>{sibling}</p>
                         </div>
-                    )}
+                    )} 
                     </div>
                 </div>
                 <div className="c-char__extra__titles">

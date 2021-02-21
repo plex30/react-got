@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .c-house{
-    display: flex;
-    flex-direction: column;
-    //align-items: center;
+    
+
     &__basic{
-        margin-left: 48rem;
+        margin-left: 40%;
         margin-top: 7rem;
     }
     &__img{
@@ -15,18 +15,24 @@
         text-align: center;
         font-family: 'Lato';
         font-size: 16px;
-    }
-    &__name{
-        
         
     }
+    
     &__extra{
         display: flex;
         justify-content: space-evenly;
+        text-align: center;
     }
-    
-    &__box{
-        
+    &__name{
+        font-size: 36px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        margin-left: -51rem;
+        margin-top: 2rem;
     }
     &__title{
         font-size: 24px;

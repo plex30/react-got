@@ -40,35 +40,35 @@ export function HousesDetails() {
 
                 <div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('WORDS')}</h3>       
-                    <div className="c-house__extra__box__subtitle__text">
+                    <div className="c-house__text">
                         <p>{casa.words}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('SEAT')}</h3>
-                    <div className="c-house__extra__box__subtitle__text">
+                    <div className="c-house__text">
                         <p>{casa.seat}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('REGION')}</h3>
-                    <div className="c-house__extra__box__subtitle__text">
+                    <div className="c-house__text">
                         <p>{casa.region}</p>
                     </div>
                 </div>
 
                 <div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('ALLEGIANCES')}</h3>
-                    <div className="c-house__extra__box__subtitle__text">
+                    <div className="c-house__text">
                         <p>{casa.allegiance}</p>
                     </div>
                 </div>
                 
                 <div className="c-house__extra__box">
                     <h3 className="c-house__title">{t('RELIGIONS')}</h3>            
-                    <div className="c-house__extra__box__subtitle__text">
+                    <div className="c-house__text">
                         <p>{casa.religion}</p>
                     </div>
                 </div>

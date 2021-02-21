@@ -3,19 +3,26 @@
 .c-char{
    
     &__basic{
-        margin-left: 48rem;
+        margin-left: 40%;
         margin-top: 7rem;
     }
 
     &__img{
         width: 248px;
         height: 320px;
-        object-fit: contain;
+        
     }
 
     &__name{
         font-size: 36px;
-        margin-left: -0.4rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        margin-left: -51rem;
+        margin-top: 2rem;
     }
 
     &__title{
@@ -26,7 +33,7 @@
     &__house{
         width: 120px;
         height: 141.6px;
-        margin-left: -2rem;
+        margin-left: -0.8rem;
     }
 
     &__apires{
@@ -56,6 +63,7 @@
     &__extra{
         display: flex;
         justify-content: space-evenly;
+        text-align: center;
     }
 
     
