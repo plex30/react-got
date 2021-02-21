@@ -7,7 +7,7 @@ export function Loading() {
     const {isLoading} = useContext(LoadingContext);
 
     return(
-        isLoading && <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        isLoading && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         
     )
 }

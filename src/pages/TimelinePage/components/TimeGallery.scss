@@ -9,7 +9,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    margin-top: 2rem;
+    margin-top: 8rem;
     margin-left: 8rem;
     height: 700px;
     width: 105rem;
@@ -98,4 +98,15 @@
     margin: auto;
     margin-left: 14.7rem;
     height: 2.5rem;
+}
+
+.timeLineSectionMain::-webkit-scrollbar{
+    width: 4px;
+    background-color: #443d3d;
+}
+
+.timeLineSectionMain::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 91.3px;
+    background-color: white;
 }

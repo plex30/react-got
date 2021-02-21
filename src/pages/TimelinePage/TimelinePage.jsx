@@ -12,7 +12,6 @@ export function TimelinePage() {
   function sortPeoplefunction(){
     
     setSortChars(sortChars + 1)
-    console.log(sortChars)
 
     if(sortChars % 2 != 0){
      const ascendente = timeline.sort(((a, b) => (a.age.age > b.age.age ? 1 : a.age.age < b.age.age ? -1 : 0)))
