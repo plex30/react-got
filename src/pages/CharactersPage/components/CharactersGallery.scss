@@ -62,7 +62,7 @@
 }
 
 
-@media (min-width:320px)  {
+@media only screen and (max-device-width: 480px){
     .c-characters-gallery {
       width: 98vw;
       height: 100vh;

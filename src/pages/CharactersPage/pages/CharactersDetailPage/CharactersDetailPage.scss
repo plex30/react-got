@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .c-char{
-    display: flex;
-    flex-direction: column;
-    //align-items: center;
+   
     &__basic{
         margin-left: 48rem;
         margin-top: 7rem;
@@ -65,3 +63,38 @@
     
 }
 
+@media only screen and (max-device-width: 480px){
+    .c-char{
+        display: inline;
+        &__basic{
+            width: 100vh;
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+        &__img{
+            width: 248px;
+            height: 320px;
+            object-fit: contain;
+        }
+    
+        &__name{
+            font-size: 26px;
+            margin-left: -0.4rem;
+            margin-bottom: 3rem;
+        }
+    
+        &__title{
+            font-size: 18px;
+            
+        }
+    
+        &__house{
+            margin-left: 0.3rem;
+            margin-bottom: 2rem;
+        }
+        &__extra{
+            display: inline;
+            text-align: center;
+        }
+    }
+}

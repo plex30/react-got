@@ -58,7 +58,7 @@ export function CharactersDetailPage() {
                         }       
                 </div>
                 <div className="c-char__extra__alleg">
-                    <h3 className="c-char__sub">{t('ALLEGIANCES')}</h3>
+                    <h3 className="c-char__title">{t('ALLEGIANCES')}</h3>
                     <div className="c-char__apires">
                     {character.allegiances.map((allegiance, i)=>
                         <div key={i}>
@@ -68,7 +68,7 @@ export function CharactersDetailPage() {
                     </div>
                 </div>
                 <div className="c-char__extra-appear">
-                    <h3 className="c-char__sub">{t('APPEARANCES')}</h3>
+                    <h3 className="c-char__title">{t('APPEARANCES')}</h3>
                     <div className="c-char__apires">
                     {character.appearances.map((appearance, i)=>
                         <div key={i}>
@@ -78,13 +78,13 @@ export function CharactersDetailPage() {
                     </div>
                 </div>
                 <div className="c-char__extra__father">
-                    <h3 className="c-char__sub">{t('FATHER')}</h3>
+                    <h3 className="c-char__title">{t('FATHER')}</h3>
                     <div className="c-char__apires">
                         <p>{character.father}</p>
                     </div>
                 </div>
                 <div className="c-char__extra__sib">
-                    <h3 className="c-char__sub">{t('SIBLINGS')}</h3>
+                    <h3 className="c-char__title">{t('SIBLINGS')}</h3>
                     <div className="c-char__apires">
                     {character.siblings.map((sibling, i)=>
                         <div key={i}>
@@ -94,7 +94,7 @@ export function CharactersDetailPage() {
                     </div>
                 </div>
                 <div className="c-char__extra__titles">
-                    <h3 className="c-char__sub">{t('TITLES')}</h3>
+                    <h3 className="c-char__title">{t('TITLES')}</h3>
                     <div className="c-char__apires">
                     {character.titles.map((title, i)=>
                         <div key={i}>

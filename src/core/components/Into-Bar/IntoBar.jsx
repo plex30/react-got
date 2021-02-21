@@ -85,11 +85,7 @@ export function IntoBar(props){
         }
     }
 
-    const onChangeTxt = (e, { value })=>{
-        const searchTxt = value.trim().replace(/" "/g, "");
-        console.log(searchTxt);
-        console.log(e)
-        }
+   
     return(
         <div>
         <nav className="c-intoBar">
@@ -99,12 +95,12 @@ export function IntoBar(props){
            <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={props.handleChange}></input>
            </label>
            </div>}
-           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack"to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img>{t('Back')}</NavLink> 
-           :showIconBack(location) && <NavLink className="c-intoBar__imgBack"to="/houses"><img className="c-intoBar__imgback" src={iconBack}></img>{t('Back')}</NavLink>}
+           {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack" to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img><span className="span">{t('Back')}</span></NavLink> 
+           :showIconBack(location) && <NavLink className="c-intoBar__imgBack" to="/houses"><img className="c-intoBar__imgback" src={iconBack}></img><span className="span">{t('Back')}</span></NavLink>}
            <div className="c-intoBar__button">
-           {showIconHouse(location) && <NavLink className="c-intoBar__link"to="/"><img className="c-intoBar__imghouse" src={house}></img></NavLink>}
-            <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('es')}><img className="c-intoBar__img" src={logoSpain}></img></button>
-            <button className="c-intoBar__link"to="/" onClick={()=> changeLanguage('en')}><img className="c-intoBar__img" src={logoEngland}></img></button>
+           {showIconHouse(location) && <NavLink className="c-intoBar__link" to="/"><img className="c-intoBar__imghouse" src={house}></img></NavLink>}
+            <button className="c-intoBar__link" to="/" onClick={()=> changeLanguage('es')}><img className="c-intoBar__img" src={logoSpain}></img></button>
+            <button className="c-intoBar__link" to="/" onClick={()=> changeLanguage('en')}><img className="c-intoBar__img" src={logoEngland}></img></button>
            </div>
         </nav>
 
