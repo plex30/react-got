@@ -92,7 +92,7 @@ export function IntoBar(props){
            {showSearchBar(location) &&  
            <div className="c-intoBar__contentSearch">
            <label><img src={iconSearch} className="iconSearch"></img>
-           <input type="text" className="c-intoBar__search" placeholder="Search..." onChange={props.handleChange}></input>
+           <input type="text" className="c-intoBar__search" placeholder="Search..." onInput={props.handleChange}></input>
            </label>
            </div>}
            {showIconBack(location) && location.pathname == charPage ? <NavLink className="c-intoBar__imgBack" to="/characters"><img className="c-intoBar__imgBack" src={iconBack}></img><span className="span">{t('Back')}</span></NavLink> 
