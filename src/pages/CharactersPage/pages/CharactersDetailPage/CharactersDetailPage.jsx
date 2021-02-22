@@ -50,14 +50,14 @@ export function CharactersDetailPage() {
             </div>
 
             <div className= "c-char__extra">
-                <div className="c-char__extra__alleg">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('HOUSE')}</h3>{
                             house.logoURL
                             ?<img className="c-char__house" src={house.logoURL} alt={house.name} />
                             :<img className="c-char__house" src= {logoDefault} alt={character.house} />
                         }       
                 </div>
-                <div className="c-char__extra__alleg">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('ALLEGIANCES')}</h3>
                     <div className="c-char__apires">
                     {character.allegiances.map((allegiance, i)=>
@@ -67,7 +67,7 @@ export function CharactersDetailPage() {
                     )}
                     </div>
                 </div>
-                <div className="c-char__extra-appear">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('APPEARANCES')}</h3>
                     <div className="c-char__apires">
                     {character.appearances.map((appearance, i)=>
@@ -77,13 +77,13 @@ export function CharactersDetailPage() {
                     )}
                     </div>
                 </div>
-                <div className="c-char__extra__father">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('FATHER')}</h3>
                     <div className="c-char__apires">
                         <p>{character.father}</p>
                     </div>
                 </div>
-                <div className="c-char__extra__sib">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('SIBLINGS')}</h3>
                     <div className="c-char__apires">
                     {character.siblings.map((sibling, i)=>
@@ -93,7 +93,7 @@ export function CharactersDetailPage() {
                     )} 
                     </div>
                 </div>
-                <div className="c-char__extra__titles">
+                <div className="c-char__item">
                     <h3 className="c-char__title">{t('TITLES')}</h3>
                     <div className="c-char__apires">
                     {character.titles.map((title, i)=>
